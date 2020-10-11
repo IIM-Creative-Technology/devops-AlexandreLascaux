@@ -1,46 +1,36 @@
-# DATAVIZ
+# Explication de la CI/CD du projet
 
-## Projet
+Dans un premier temps, je tiens à préciser que ce projet contient deux parties :
 
-Dataviz est un projet sur la visualisation de données concernant la météo et la qualité des cours d'eau en France.
-Le back a été construit avec NodeJS et ExpressJS, et le front avec Angular 8. Sequelize est requis au préalable.
-Docker est également utilisée pour notre base de données.
+- le backend : API en Express.js contenant une base de données en MySql
 
+- le frontend: application en Angular 8, totalement indépendante du backend
 
+## La CI/CD du backend
 
-## Lancement du Docker
+Elle se décompose en deux fichiers :
 
-Rendez-vous dans le dossier Docker-Bdd. Une fois dans ce dossier, exécutez la commande suivante pour créer le réseau interne du docker :  
-`docker network create --internal reseau_interne_base`  
-Ensuite, lancer le docker avec la commande suivante :
-`docker-compose up -d`  
-Une fois lancé, allez sur [localhost:8888](localhost:8888). Vous arriverez sur la page de connexion de PhpMyAdmin.  
-L'identifiant est **root** et le mot de passe est **root**.  
-Créez une nouvelle base de données nommée **dataviz**.
+- Le premier comprenant une CI/CD complête avec un déploiement sur Heroku (deployBack.yml)
+- Le second comprenant juste une CI lors d'une pull request (prBack.yml)
 
-## Installation du back
+Dans le premier ficher, cela, installe en premier, les dépendaces nécessaires, construit l'application, vérifie le code et déploie le tout sur Heroku.
 
-A présent, rendez-vous dans le dossier Back/backend.
-Installez les modules nécessaires :
-`npm install`
-Pour créer le schéma de la base de données, exécutez la commande suivante :
-`sequelize db:migrate`
-Pour plus d'informations sur Sequelize, je vous invite à vous documenter [dessus](https://sequelize.org/v5/)).
-Puis :
-`npm start`
-Le back est prêt et à l'écoute.
+Dans le second fichier, cela reproduit les mêmes étapes sans déployer sur Heroku.
 
+## La CI/CD du frontend
 
-## Installation du front
+Elle se décompoese également en deux fichiers :
 
-Il s'agit du dossier Front, exécutez la commande suivante pour installer les modules nécessaires :  
-`npm install`
-Pour lancer le serveur Angular, exécutez la commande suivante : 
-`ng serve -o` (le `-o` va ouvrir automatiquement une fenêtre sur le site).  
+- Le premier comprenant une CI/CD complête avec un déploiement sur Heroku (deployFront.yml)
 
+- Le second comprenant juste une CI lors d'une pull request (prFront.yml)
 
-Rendez-vous sur la page [localhost:4200](localhost:4200) pour profitez du site Dataviz.
+Dans le premier ficher, cela installe, en premier, les dépendaces nécessaires, vérifie le code, exécute les scripts de testes, construit l'application et déploie le tout sur Heroku.
 
-## Swagger
+Dans le second fichier, cela reproduit les mêmes étapes sans déployer sur Heroku.
 
-Un swagger est disponible à l'adresse [localhost:3000/explorer](localhost:3000/explorer).
+___
+
+1. *Il y a une erreur lors du build sur Heroku, certainement dû au buildpack mais ne trouvant pas le buildpack nécessaire, je préviens*
+
+2. *Le rendu étant sur un seul repository, je me permets de mettre les liens de deux repository distincts, [celui du back](https://github.com/AlexandreLascaux/dataviz-back) et [celui du front](https://github.com/AlexandreLascaux/dataviz-front), afin de montrer les deux worflows disctincts des deux parties avec les branches master (= prod) et pre-prod*
