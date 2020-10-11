@@ -1,4 +1,4 @@
-name: Deploy website to Heroku
+name: Deploy Front to Heroku
 on:
   push:
     branches:
@@ -16,19 +16,24 @@ jobs:
           node-version: '12.x'
       - name: Install dependencies
         run: npm install
+        working-directory: Front
       - name: Lint  
         run: npm run lint
+        working-directory: Front
       - name: Unit tests  
         run: npm run test:ci  
+        working-directory: Front
       - name: E2E  
         run: npm run e2e:ci
+        working-directory: Front
       - name: Build app  
         run: npm run build:prod
+        working-directory: Front
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.5.6
         with:
           heroku_api_key: ${{secrets.HEROKU_KEY}}
           heroku_app_name: ${{secrets.HEROKU_APP}}
           heroku_email: ${{secrets.HEROKU_EMAIL}}
-          procfile: "web: npm start"
+          appdir: "Front"
       
