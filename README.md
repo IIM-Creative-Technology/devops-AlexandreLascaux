@@ -17,6 +17,10 @@ Dans le premier ficher, cela, installe en premier, les dépendaces nécessaires,
 
 Dans le second fichier, cela reproduit les mêmes étapes sans déployer sur Heroku.
 
+[Lien de la prod](https://iim-a4-rendu-back.herokuapp.com/)
+
+[Lien de la preprod](https://iim-a4-rendu-back-pre-prod.herokuapp.com/)
+
 ## La CI/CD du [frontend](https://github.com/AlexandreLascaux/dataviz-front)
 
 Elle se décompoese également en deux fichiers :
@@ -28,6 +32,10 @@ Elle se décompoese également en deux fichiers :
 Dans le premier ficher, cela installe, en premier, les dépendaces nécessaires, vérifie le code, exécute les scripts de testes, construit l'application et déploie le tout sur Heroku.
 
 Dans le second fichier, cela reproduit les mêmes étapes sans déployer sur Heroku.
+
+[Lien de la prod](https://iim-a4-rendu-front.herokuapp.com/)
+
+[Lien de la preprod](https://iim-a4-rendu-front-pre-prod.herokuapp.com/)
 
 ___
 
