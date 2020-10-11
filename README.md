@@ -10,10 +10,10 @@ Dans un premier temps, je tiens à préciser que ce projet contient deux parties
 
 Elle se décompose en deux fichiers :
 
-- Le premier comprenant une CI/CD complête avec un déploiement sur Heroku (deployBack.yml)
+- Le premier comprenant une CI/CD complète avec un déploiement sur Heroku (deployBack.yml)
 - Le second comprenant juste une CI lors d'une pull request (prBack.yml)
 
-Dans le premier ficher, cela, installe en premier, les dépendaces nécessaires, construit l'application, vérifie le code et déploie le tout sur Heroku.
+Dans le premier fichier, cela, installe en premier, les dépendances nécessaires, construit l'application, vérifie le code et déploie le tout sur Heroku.
 
 Dans le second fichier, cela reproduit les mêmes étapes sans déployer sur Heroku.
 
@@ -29,7 +29,7 @@ Elle se décompoese également en deux fichiers :
 
 - Le second comprenant juste une CI lors d'une pull request (prFront.yml)
 
-Dans le premier ficher, cela installe, en premier, les dépendaces nécessaires, vérifie le code, exécute les scripts de testes, construit l'application et déploie le tout sur Heroku.
+Dans le premier ficher, cela installe, en premier, les dépendances nécessaires, vérifie le code, exécute les scripts de testes, construit l'application et déploie le tout sur Heroku.
 
 Dans le second fichier, cela reproduit les mêmes étapes sans déployer sur Heroku.
 
