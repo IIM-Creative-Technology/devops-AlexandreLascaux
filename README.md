@@ -39,6 +39,6 @@ Dans le second fichier, cela reproduit les mêmes étapes sans déployer sur Her
 
 ___
 
-1. *Il y a une erreur lors du build sur Heroku, certainement dû au buildpack mais ne trouvant pas le buildpack nécessaire, je préviens*
+1. *Il y a une erreur lors du build du frontend sur Heroku, certainement dû au buildpack mais ne trouvant pas le buildpack nécessaire, je préviens*
 
 2. *Le rendu étant sur un seul repository, je me permets de remettre les liens de deux repository distincts, [celui du back](https://github.com/AlexandreLascaux/dataviz-back) et [celui du front](https://github.com/AlexandreLascaux/dataviz-front), afin de montrer les deux worflows disctincts des deux parties avec les branches master (= prod) et pre-prod*
