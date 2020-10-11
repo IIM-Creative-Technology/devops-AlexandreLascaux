@@ -19,7 +19,7 @@ jobs:
         working-directory: backend
       - name: Build
         run: npm run build --if-present
-        working-directory: Front
+        working-directory: backend
       - name: Run linters
         uses: wearerequired/lint-action@v1
         with:
