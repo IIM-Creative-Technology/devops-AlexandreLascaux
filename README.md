@@ -6,7 +6,7 @@ Dans un premier temps, je tiens à préciser que ce projet contient deux parties
 
 - le frontend: application en Angular 8, totalement indépendante du backend
 
-## La CI/CD du backend
+## La CI/CD du [backend](https://github.com/AlexandreLascaux/dataviz-back)
 
 Elle se décompose en deux fichiers :
 
@@ -17,7 +17,7 @@ Dans le premier ficher, cela, installe en premier, les dépendaces nécessaires,
 
 Dans le second fichier, cela reproduit les mêmes étapes sans déployer sur Heroku.
 
-## La CI/CD du frontend
+## La CI/CD du [frontend](https://github.com/AlexandreLascaux/dataviz-front)
 
 Elle se décompoese également en deux fichiers :
 
@@ -33,4 +33,4 @@ ___
 
 1. *Il y a une erreur lors du build sur Heroku, certainement dû au buildpack mais ne trouvant pas le buildpack nécessaire, je préviens*
 
-2. *Le rendu étant sur un seul repository, je me permets de mettre les liens de deux repository distincts, [celui du back](https://github.com/AlexandreLascaux/dataviz-back) et [celui du front](https://github.com/AlexandreLascaux/dataviz-front), afin de montrer les deux worflows disctincts des deux parties avec les branches master (= prod) et pre-prod*
+2. *Le rendu étant sur un seul repository, je me permets de remettre les liens de deux repository distincts, [celui du back](https://github.com/AlexandreLascaux/dataviz-back) et [celui du front](https://github.com/AlexandreLascaux/dataviz-front), afin de montrer les deux worflows disctincts des deux parties avec les branches master (= prod) et pre-prod*
