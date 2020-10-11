@@ -1,0 +1,82 @@
+<div class="card-body p-4" *ngIf="datasets">
+  <div class="card-title">
+    Evolution des données météorologiques sur 5 jours
+  </div>
+  <canvas
+    baseChart
+    [datasets]="datasets"
+    [labels]="labels"
+    [options]="options"
+    [chartType]="type"
+  >
+  </canvas>
+  <fieldset>
+    <label for="pressure">
+      <input
+        type="radio"
+        (change)="toggleEditable($event)"
+        name="type"
+        id="pressure"
+        value="pressure"
+      />
+      Pression
+    </label>
+    <label for="humidity">
+      <input
+        type="radio"
+        (change)="toggleEditable($event)"
+        name="type"
+        id="humidity"
+        value="humidity"
+      />
+      Humidité
+    </label>
+    <label for="temperature">
+      <input
+        type="radio"
+        (change)="toggleEditable($event)"
+        name="type"
+        id="temperature"
+        value="temperature"
+      />
+      Température
+    </label>
+    <label for="cloud">
+      <input
+        type="radio"
+        (change)="toggleEditable($event)"
+        name="type"
+        id="cloud"
+        value="cloud"
+      />
+      Nuage
+    </label>
+    <label for="precipitation">
+      <input
+        type="radio"
+        (change)="toggleEditable($event)"
+        name="type"
+        id="precipitation"
+        value="precipitation"
+      />
+      Précipitation
+    </label>
+    <label for="vent">
+      <input
+        type="radio"
+        (change)="toggleEditable($event)"
+        name="type"
+        id="vent"
+        value="wind"
+      />
+      Vent
+    </label>
+  </fieldset>
+</div>
+
+<script>
+  function adddata() {
+    this.labels = "Newly Added";
+    this.datasets.update();
+  }
+</script>
