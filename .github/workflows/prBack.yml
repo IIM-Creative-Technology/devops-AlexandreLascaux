@@ -16,8 +16,10 @@ jobs:
           node-version: '12.x'
       - name: Install dependecies
         run: npm install
+        working-directory: backend
       - name: Build
         run: npm run build --if-present
+        working-directory: Front
       - name: Run linters
         uses: wearerequired/lint-action@v1
         with:
@@ -25,5 +27,7 @@ jobs:
           # Enable linters
           eslint: true
           eslint_args: "--fix"
+          eslint_dir: backend
           prettier: true
           prettier_args: "-w"
+          prettier_dir: backend
